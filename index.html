@@ -1,152 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible"content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> New Jeans</title>
-    </head>
-    <!---------------------------------------------------------->
-    <body> <!--inicio de página-->
-        <header>
-        <div>
-            <span>New Jeans</span>
-            <span>New Jeans</span>
-            <span>New Jeans</span>
-            <button>Discografía</button>
-            <button>Información</button>
-            <button>Integrantes</button>
-            <img src="./Images/Portada 1.png" alt="Portada New Jeans" width="1480" height="1024">
-            <button>¡Visita nuestra galeria!</button>
-            <img src="./Images/Portada 2.png" alt="Portada New Jeans" width="1480" height="1024">
-            <img src="./Images/Portada 3.png" alt="Portada New Jeans" width="1480" height="1024">
-            <img src="./Images/Portada 4.png" alt="Portada New Jeans" width="1480" height="1024">
-            <img src="./Images/Portada 5.png" alt="Portada New Jeans" width="1480" height="1024">
-            <img src="./Images/Portada 6.png" alt="Portada New Jeans" width="1480" height="1024">
-            <button>Noticias</button>
-            <button>Últimas videos</button>
-            <button>Tutoriales</button>
-            <audio src="../music/OMG.mp3" controls="controls"  preload="none">
-            </audio>
-            <script>
-                function cambiarTrack(track) {
-                   var value =  track.getAttribute("value")
-                   viejo_audio = document.getElementById("reproductor")
-                   audio_padre = viejo_audio.parentNode
-                   audio_padre.removeChild(viejo_audio)
-                   nuevo_audio = document.createElement("audio")
-                   nuevo_audio.setAttribute("id","reproduction")
-                   nuevo_audio.setAttribute("controls", "controls")
-                  // nuevo_audio.setAttribute("autoplay", "autoplay")
-                   source = document.createElement("source")
-                   source.setAttribute("src", value)
-                   source.setAttribute("type", "audio/mpeg")
-                   source.setAttribute("id", "reproductorSource")
-                   nuevo_audio.appendChild(source)
-                   audio_padre.appendChild(nuevo_audio)}
-                function cargarReproductor() {
-                         var select = document.getElementById("select track")
-                         var value = select.options[0].getAttribute("value")
-                   nuevo_audio = document.createElement("audio")
-                   nuevo_audio.setAttribute("id","reproduction")
-                   nuevo_audio.setAttribute("controls", "controls")       
-                   source = document.createElement("source")
-                   source.setAttribute("src", value)
-                   source.setAttribute("type", "audio/mpeg")
-                   source.setAttribute("id", "reproductorSource")
-                   nuevo_audio.appendChild(source)
-                   padre = document.getElementById("reproductorBox")
-                   padre.appendChild(nuevo_audio)
-                }
-                </script>
-                <div id="reproductorBox"></div>
-                <select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
-                <option value="../music/OMG.mp3">New Jeans - OMG</option>
-                <option value="../music/Ditto.mp3">New Jeans - Ditto</option>
-                <option value="../music/New Jeans">New Jeans - New Jeans</option>
-                </select>
-                <script>cargarReproductor();</script>
-        </div>
-        </header>
-        <!-------------------------------------------------------------------------------->
-        <main> <!--Aquí se maneja las divisiones que teng al página-->
-            <section> <!--Etiqueta para las divisones de la página-->
-                <h1> New Jeans</h1> <!--Título principal de la página-->
-                <div>
-                <span>Discografía</span>
-                <img src="./Imagen/New Jeans first ep.png/" alt="Disco 1st ep New Jeans" width="1480" height="1024">
-                <img src="./Imagen/New Jeans Zero.png/" alt="Disco Zero" width="1480" height="1024">
-                <img src="./Imagen/New Jeans OMG.png/" alt="Disco OMG" width="1480" height="1024">
-                <img src="./Imagen/New Jeans New Jeans and ep 'get up2'.png/" alt="Disco 2nd ep New Jeans" width="1480" height="1024">
-                <button> Si quieres saber más, pulsa aquí</button>
-                <button>Back</button>
-                </div>
-            </section>
-            <section> <!--Sección de información-->
-                <h2> Información</h2>
-                <div>
-                <p> Información sobre el grupo</p>
-                <img src="./Imagen/ New jeans, información.png/" alt="Portada información" width="1480" height="1024">
-                <img src="./Imagen/ New jeans, información 2.png/" alt="Potada Información 2" width="1480" height="1024">
-                <button>Si quieres saber más, pulsa aquí</button>
-                </div>
-            </section>
-            <section>
-                <h3>Integrantes</h3>
-                <div>
-                <img src="./Imagen/ New jeans, Hyein.png/" alt="Portada Hyein" width="1480" height="1024">
-                <button>Hyein</button>
-                <img src="./Imagen/ New jeans, Haerin.png/" alt="Portada Haerin" width="1480" height="1024">
-                <button>Haerin</button>
-                <img src="./Imagen/ New jeans, Minji.png/" alt="Portada Minji" width="1480" height="1024">
-                <button>Minji</button>
-                <img src="./Imagen/ New jeans, Danielle.png/" alt="Portada Danielle" width="1480" height="1024">
-                <button>Danielle</button>
-                <img src="./Imagen/ New jeans, Hanni.png/" alt="Portada Hanni" width="1480" height="1024">
-                <button>Hanni</button>
-                <button>Back</button>
-                </div>
-            </section>
-            <section> <!-- Sección últimos videos, noticas, tutoriales-->
-                <p> Últimos videos</p>
-                <video width="320" height="240">
-                    <p> Noticias</p>
-                    <p>Noticas de New Jeans</p>
-                    <p> Tutoriales</p>
-                    <video width="320" height="240">
-                        <button> Si quieres saber más, pulsa aquí</button>
-                        <p>Si quieres recibir notificaciones y te interesa seguir la pagina, pulsa aquí</p>
-                        <button>icono</button>
-                        <div>
-                            <form action>
-                                <p>
-                                <h1>Nombre</h1>
-                                <input type="Nombre">
-                                <h1> Contanto</h1>
-                                <input type="Contanto">
-                                <h1> Email</h1>
-                                <input type="Email">
-                                </p>
-                                <input type="submit" value="Enviar"> <!--Botón para enviar la info-->
-                            </form>
-                       </div>
-            </section>
-        </main>
-        <!-------------------------------------------------------->
-        <footer><!--pie de página-->
-            <div>
-                <span> Autor</span>
-                <p>Sofía Bohórquez</p>
-            </div>
-            <div> 
-    <span> Correo</span>
-    <p>ansofibo@gmail.com</p>
-</div>
-<div>
-    <span> Año</span>
-    <p> @2023</p>
-</div>
-        </footer>
-    </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zipaquirá Experience - Beta Version</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>Zipaquirá Experience 🇨🇴</h1>
+        <p>Tu guía bilingüe por la Ciudad de la Sal / Your bilingual guide to the Salt City</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="#catedral">1. Catedral</a></li>
+                <li><a href="#gastronomia">2. Gastronomía</a></li>
+                <li><a href="#centro">3. Centro Histórico</a></li>
+                <li><a href="#naturaleza">4. Naturaleza</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="catedral" class="seccion-turistica">
+            <h2>1. Catedral de Sal y Herencia Minera / Salt Cathedral and Mining Heritage</h2>
+            
+            <div class="subseccion">
+                <h3>Estaciones Subterráneas / Underground Stations</h3>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Vía Crucis.jpg" alt="Estación del Vía Crucis en la Catedral de Sal" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>El Vía Crucis / The Stations of the Cross</h4>
+                        <p class="esp"><strong>ES:</strong> Un recorrido místico a través de oscuros túneles iluminados, donde descubrirás las estaciones del Vía Crucis talladas directamente en la roca de sal.</p>
+                        <p class="eng"><strong>EN:</strong> A mystical journey through illuminated dark tunnels, where you will discover the Stations of the Cross carved directly into the salt rock.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/La Cúpula.jpg" alt="La Cúpula en la Catedral de Sal" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>La Cúpula / The Dome</h4>
+                        <p class="esp"><strong>ES:</strong> Una impresionante cámara circular que se eleva majestuosamente. Observa cómo la luz azul baña la sal.</p>
+                        <p class="eng"><strong>EN:</strong> An impressive circular chamber that rises majestically. Watch how the blue light bathes the salt.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/La Nave Central.jpg" alt="Nave Central en la Catedral de Sal" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>La Nave Central / The Main Nave</h4>
+                        <p class="esp"><strong>ES:</strong> El corazón de la maravilla. Aquí te encontrarás frente a la cruz subterránea más grande del mundo.</p>
+                        <p class="eng"><strong>EN:</strong> The heart of the wonder. Here you will find yourself in front of the world's largest underground cross.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="subseccion">
+                <h3>Museo de la Salmuera / Brine Museum</h3>
+                <article class="experiencia">
+                   <div class="imagen-placeholder">
+    <img src="img/Tanques de saturación.jpg" alt="Tanques de Saturación en el Museo de la Salmuera" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Tanques de Saturación / Saturation Tanks</h4>
+                        <p class="esp"><strong>ES:</strong> Explora los antiguos tanques donde la roca se disolvía en agua para crear la salmuera.</p>
+                        <p class="eng"><strong>EN:</strong> Explore the ancient tanks where the rock was dissolved in water to create brine.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                  <div class="imagen-placeholder">
+    <img src="img/Hornos.jpg" alt="Hornos de Evaporación en el Museo de la Salmuera" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Hornos de Evaporación / Evaporation Ovens</h4>
+                        <p class="esp"><strong>ES:</strong> Conoce el intenso proceso térmico para dejar atrás los puros cristales de sal.</p>
+                        <p class="eng"><strong>EN:</strong> Learn about the intense thermal process to leave behind pure salt crystals.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Minero.jpg" alt="La Vida del Minero en la Catedral de Sal" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>La Vida del Minero / The Miner's Life</h4>
+                        <p class="esp"><strong>ES:</strong> Una mirada íntima a las herramientas y las historias de los hombres que construyeron esta maravilla.</p>
+                        <p class="eng"><strong>EN:</strong> An intimate look at the tools and stories of the men who built this wonder.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="gastronomia" class="seccion-turistica">
+            <h2>2. Gastronomía Local / Local Gastronomy</h2>
+            <div class="subseccion">
+                <h3>Plaza de Mercado / Market Square</h3>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Frutas.jpg" alt="Frutas Exóticas en el Mercado" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Frutas Exóticas / Exotic Fruits</h4>
+                        <p class="esp"><strong>ES:</strong> Descubre la explosión de sabores ácidos y aromas tropicales como el lulo y la feijoa.</p>
+                        <p class="eng"><strong>EN:</strong> Discover the explosion of acidic flavors and tropical aromas like lulo and feijoa.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Papas.jpg" alt="Papas Andinas en el Mercado" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Papas Andinas / Andean Potatoes</h4>
+                        <p class="esp"><strong>ES:</strong> Conoce la increíble variedad de papas nativas que son la base de nuestra cultura.</p>
+                        <p class="eng"><strong>EN:</strong> Get to know the incredible variety of native potatoes that are the base of our culture.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Hierbas.jpg" alt="Hierbas Tradicionales en el Mercado" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Hierbas Tradicionales / Traditional Herbs</h4>
+                        <p class="esp"><strong>ES:</strong> Un viaje sensorial a través de los aromas de las hierbas medicinales y de cocina.</p>
+                        <p class="eng"><strong>EN:</strong> A sensory journey through the aromas of medicinal and culinary herbs.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="subseccion">
+                <h3>Platos Típicos / Traditional Dishes</h3>
+                <article class="experiencia">
+                  <div class="imagen-placeholder">
+    <img src="img/Ajiaco.jpg" alt="Ajiaco Santafereño" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Ajiaco Santafereño / Ajiaco Soup</h4>
+                        <p class="esp"><strong>ES:</strong> La sopa más emblemática de la región, preparada con tres tipos de papas y pollo.</p>
+                        <p class="eng"><strong>EN:</strong> The most emblematic soup of the region, prepared with three types of potatoes and chicken.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Fritanga.jpg" alt="Fritanga Zipaquireña" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Fritanga Zipaquireña / Zipaquira's Fritanga</h4>
+                        <p class="esp"><strong>ES:</strong> Un festín tradicional que incluye rellena, longaniza y papa criolla.</p>
+                        <p class="eng"><strong>EN:</strong> A traditional feast including blood sausage, pork sausage, and yellow potatoes.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Cuajada.jpg" alt="Cuajada con Melao" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Cuajada con Melao / Curd with Melted Panela</h4>
+                        <p class="esp"><strong>ES:</strong> El postre clásico por excelencia: queso fresco artesanal bañado en jarabe de panela.</p>
+                        <p class="eng"><strong>EN:</strong> The quintessential classic dessert: artisanal fresh cheese bathed in sugar cane syrup.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="centro" class="seccion-turistica">
+            <h2>3. Centro Histórico / Historical Center</h2>
+            <div class="subseccion">
+                <h3>Plaza de la Independencia / Independence Square</h3>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Balcones.jpg" alt="Balcones de la Plaza de la Independencia" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Arquitectura Colonial / Colonial Architecture</h4>
+                        <p class="esp"><strong>ES:</strong> Admira la elegancia de las fachadas blancas y balcones de madera de la plaza principal.</p>
+                        <p class="eng"><strong>EN:</strong> Admire the elegance of the white facades and wooden balconies of the main square.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Monumento Comuneros.jpg" alt="Monumento a los Comuneros" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Monumento a los Comuneros / The Comuneros Monument</h4>
+                        <p class="esp"><strong>ES:</strong> Rinde homenaje a los valientes líderes que lucharon por la libertad.</p>
+                        <p class="eng"><strong>EN:</strong> Pay tribute to the brave leaders who fought for freedom.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Catedral de la Santisima Trinidad.jpg" alt="Catedral de la Santísima Trinidad" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Catedral de la Santísima Trinidad / Holy Trinity Cathedral</h4>
+                        <p class="esp"><strong>ES:</strong> Imponente construcción de piedra, símbolo de la fe y el arte de nuestra región.</p>
+                        <p class="eng"><strong>EN:</strong> Imposing stone construction, a symbol of faith and art in our region.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="subseccion">
+                <h3>Talleres Artesanales / Artisanal Workshops</h3>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Talla en sal.jpg" alt="Talla en Sal" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Talla en Sal / Salt Carving</h4>
+                        <p class="esp"><strong>ES:</strong> Observa a los maestros artesanos transformar bloques de sal en hermosas esculturas.</p>
+                        <p class="eng"><strong>EN:</strong> Watch master artisans transform salt blocks into beautiful sculptures.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Tejidos tradicionales.jpg" alt="Tejidos Tradicionales" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Tejidos Tradicionales / Traditional Weaving</h4>
+                        <p class="esp"><strong>ES:</strong> Descubre el arte del tejido a mano con fibras naturales de nuestros ancestros.</p>
+                        <p class="eng"><strong>EN:</strong> Discover the art of hand-weaving with natural fibers from our ancestors.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Céramica.jpg" alt="Cerámica y Alfarería" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Cerámica y Alfarería / Pottery and Clay Art</h4>
+                        <p class="esp"><strong>ES:</strong> Siente la textura de la tierra y aprende a crear vasijas únicas con expertos.</p>
+                        <p class="eng"><strong>EN:</strong> Feel the texture of the earth and learn to create unique vessels with experts.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="naturaleza" class="seccion-turistica">
+            <h2>4. Naturaleza y Senderismo / Nature and Hiking</h2>
+            <div class="subseccion">
+                <h3>Páramo de Guerrero / Guerrero Moorland</h3>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Frailejones.jpg" alt="Ecosistema de Frailejones" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Ecosistema de Frailejones / Frailejones Ecosystem</h4>
+                        <p class="esp"><strong>ES:</strong> Descubre un ecosistema único lleno de niebla y frailejones gigantes.</p>
+                        <p class="eng"><strong>EN:</strong> Discover a unique ecosystem full of mist and giant frailejones.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Mirador.jpg" alt="Mirador del Valle" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Mirador / Viewpoint</h4>
+                        <p class="esp"><strong>ES:</strong> Alcanza la cima y disfruta de una vista panorámica espectacular de la región.</p>
+                        <p class="eng"><strong>EN:</strong> Reach the top and enjoy a spectacular panoramic view of the region.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Aves.jpg" alt="Avistamiento de Aves" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Avistamiento de Aves / Bird Watching</h4>
+                        <p class="esp"><strong>ES:</strong> Observa especies de aves endémicas en su hábitat natural lleno de colores.</p>
+                        <p class="eng"><strong>EN:</strong> Observe endemic bird species in their natural habitat full of colors.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="subseccion">
+                <h3>Agroturismo Rural / Rural Agrotourism</h3>
+                <article class="experiencia">
+                 <div class="imagen-placeholder">
+    <img src="img/Granja.jpg" alt="Mañana en la Granja" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Mañana en la Granja / Morning at the Farm</h4>
+                        <p class="esp"><strong>ES:</strong> Vive la experiencia de ordeñar vacas y aprender sobre la leche fresca.</p>
+                        <p class="eng"><strong>EN:</strong> Live the experience of milking cows and learning about fresh milk.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                 <div class="imagen-placeholder">
+    <img src="img/Organica.jpg" alt="Cosecha Orgánica" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Cosecha Orgánica / Organic Harvesting</h4>
+                        <p class="esp"><strong>ES:</strong> Pon tus manos en la tierra para cosechar tus propios vegetales orgánicos.</p>
+                        <p class="eng"><strong>EN:</strong> Put your hands in the dirt to harvest your own organic vegetables.</p>
+                    </div>
+                </article>
+                <article class="experiencia">
+                    <div class="imagen-placeholder">
+    <img src="img/Amasijos.jpg" alt="Taller de Amasijos" class="foto-experiencia">
+</div>
+                    <div class="textos">
+                        <h4>Taller de Amasijos / Traditional Baking Workshop</h4>
+                        <p class="esp"><strong>ES:</strong> Aprende a preparar deliciosas almojábanas y pan de yuca en horno de leña.</p>
+                        <p class="eng"><strong>EN:</strong> Learn to prepare delicious almojábanas and pan de yuca in a wood-fired oven.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desarrollado por Ana Sofía Bohórquez Fonseca | Ingeniería Multimedia - UNAD 2026</p>
+    </footer>
+
+</body>
+</html>
