@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW JEANS</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #2c2f33;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .song-title {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            background-color: #202225;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Media Queries */
+
+        /* Para pantallas más pequeñas que 480px */
+        @media only screen and (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .section-header {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+
+            .song-title {
+                font-size: 18px;
+                margin-bottom: 3px;
+            }
+
+            .footer {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        /* Para pantallas entre 481px y 768px */
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+                margin-bottom: 18px;
+            }
+
+            .section-header {
+                font-size: 22px;
+                margin-bottom: 9px;
+            }
+
+            .song-title {
+                font-size: 19px;
+                margin-bottom: 4px;
+            }
+
+            .footer {
+                font-size: 13px;
+                padding: 9px;
+            }
+        }
+
+        /* Para pantallas entre 769px y 1024px */
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            h1 {
+                font-size: 30px;
+                margin-bottom: 19px;
+            }
+
+            .section-header {
+                font-size: 23px;
+                margin-bottom: 10px;
+            }
+
+            .song-title {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .footer {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        /* Puedes agregar otras reglas media query adicionales según sea necesario */
+        @media only screen and (min-width: 1025px) {
+            /* Reglas para pantallas más grandes que 1024px */
+            h1 {
+                font-size: 36px;
+                margin-bottom: 22px;
+            }
+
+            .section-header {
+                font-size: 26px;
+                margin-bottom: 11px;
+            }
+
+            .song-title {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
+
+            .footer {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>NEW JEANS</h1>
+    <div class="section-header">ÚLTIMOS VIDEOS</div>
+    <div class="song-title">NOW PLAYING: Omg - NEW JEANS</div>
+    <!-- Add the rest of your content here -->
+    <div class="footer">PC BO © 2021. Todos los derechos reservados.</div>
+</body>
+</html>

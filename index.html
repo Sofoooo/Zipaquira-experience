@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> New Jeans</title>
+    </head>
+    <!---------------------------------------------------------->
+    <body> <!--inicio de página-->
+        <header>
+        <div>
+            <span>New Jeans</span>
+            <span>New Jeans</span>
+            <span>New Jeans</span>
+            <button>Discografía</button>
+            <button>Información</button>
+            <button>Integrantes</button>
+            <img src="./Images/Portada 1.png" alt="Portada New Jeans" width="1480" height="1024">
+            <button>¡Visita nuestra galeria!</button>
+            <img src="./Images/Portada 2.png" alt="Portada New Jeans" width="1480" height="1024">
+            <img src="./Images/Portada 3.png" alt="Portada New Jeans" width="1480" height="1024">
+            <img src="./Images/Portada 4.png" alt="Portada New Jeans" width="1480" height="1024">
+            <img src="./Images/Portada 5.png" alt="Portada New Jeans" width="1480" height="1024">
+            <img src="./Images/Portada 6.png" alt="Portada New Jeans" width="1480" height="1024">
+            <button>Noticias</button>
+            <button>Últimas videos</button>
+            <button>Tutoriales</button>
+            <audio src="../music/OMG.mp3" controls="controls"  preload="none">
+            </audio>
+            <script>
+                function cambiarTrack(track) {
+                   var value =  track.getAttribute("value")
+                   viejo_audio = document.getElementById("reproductor")
+                   audio_padre = viejo_audio.parentNode
+                   audio_padre.removeChild(viejo_audio)
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproduction")
+                   nuevo_audio.setAttribute("controls", "controls")
+                  // nuevo_audio.setAttribute("autoplay", "autoplay")
+                   source = document.createElement("source")
+                   source.setAttribute("src", value)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   audio_padre.appendChild(nuevo_audio)}
+                function cargarReproductor() {
+                         var select = document.getElementById("select track")
+                         var value = select.options[0].getAttribute("value")
+                   nuevo_audio = document.createElement("audio")
+                   nuevo_audio.setAttribute("id","reproduction")
+                   nuevo_audio.setAttribute("controls", "controls")       
+                   source = document.createElement("source")
+                   source.setAttribute("src", value)
+                   source.setAttribute("type", "audio/mpeg")
+                   source.setAttribute("id", "reproductorSource")
+                   nuevo_audio.appendChild(source)
+                   padre = document.getElementById("reproductorBox")
+                   padre.appendChild(nuevo_audio)
+                }
+                </script>
+                <div id="reproductorBox"></div>
+                <select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+                <option value="../music/OMG.mp3">New Jeans - OMG</option>
+                <option value="../music/Ditto.mp3">New Jeans - Ditto</option>
+                <option value="../music/New Jeans">New Jeans - New Jeans</option>
+                </select>
+                <script>cargarReproductor();</script>
+        </div>
+        </header>
+        <!-------------------------------------------------------------------------------->
+        <main> <!--Aquí se maneja las divisiones que teng al página-->
+            <section> <!--Etiqueta para las divisones de la página-->
+                <h1> New Jeans</h1> <!--Título principal de la página-->
+                <div>
+                <span>Discografía</span>
+                <img src="./Imagen/New Jeans first ep.png/" alt="Disco 1st ep New Jeans" width="1480" height="1024">
+                <img src="./Imagen/New Jeans Zero.png/" alt="Disco Zero" width="1480" height="1024">
+                <img src="./Imagen/New Jeans OMG.png/" alt="Disco OMG" width="1480" height="1024">
+                <img src="./Imagen/New Jeans New Jeans and ep 'get up2'.png/" alt="Disco 2nd ep New Jeans" width="1480" height="1024">
+                <button> Si quieres saber más, pulsa aquí</button>
+                <button>Back</button>
+                </div>
+            </section>
+            <section> <!--Sección de información-->
+                <h2> Información</h2>
+                <div>
+                <p> Información sobre el grupo</p>
+                <img src="./Imagen/ New jeans, información.png/" alt="Portada información" width="1480" height="1024">
+                <img src="./Imagen/ New jeans, información 2.png/" alt="Potada Información 2" width="1480" height="1024">
+                <button>Si quieres saber más, pulsa aquí</button>
+                </div>
+            </section>
+            <section>
+                <h3>Integrantes</h3>
+                <div>
+                <img src="./Imagen/ New jeans, Hyein.png/" alt="Portada Hyein" width="1480" height="1024">
+                <button>Hyein</button>
+                <img src="./Imagen/ New jeans, Haerin.png/" alt="Portada Haerin" width="1480" height="1024">
+                <button>Haerin</button>
+                <img src="./Imagen/ New jeans, Minji.png/" alt="Portada Minji" width="1480" height="1024">
+                <button>Minji</button>
+                <img src="./Imagen/ New jeans, Danielle.png/" alt="Portada Danielle" width="1480" height="1024">
+                <button>Danielle</button>
+                <img src="./Imagen/ New jeans, Hanni.png/" alt="Portada Hanni" width="1480" height="1024">
+                <button>Hanni</button>
+                <button>Back</button>
+                </div>
+            </section>
+            <section> <!-- Sección últimos videos, noticas, tutoriales-->
+                <p> Últimos videos</p>
+                <video width="320" height="240">
+                    <p> Noticias</p>
+                    <p>Noticas de New Jeans</p>
+                    <p> Tutoriales</p>
+                    <video width="320" height="240">
+                        <button> Si quieres saber más, pulsa aquí</button>
+                        <p>Si quieres recibir notificaciones y te interesa seguir la pagina, pulsa aquí</p>
+                        <button>icono</button>
+                        <div>
+                            <form action>
+                                <p>
+                                <h1>Nombre</h1>
+                                <input type="Nombre">
+                                <h1> Contanto</h1>
+                                <input type="Contanto">
+                                <h1> Email</h1>
+                                <input type="Email">
+                                </p>
+                                <input type="submit" value="Enviar"> <!--Botón para enviar la info-->
+                            </form>
+                       </div>
+            </section>
+        </main>
+        <!-------------------------------------------------------->
+        <footer><!--pie de página-->
+            <div>
+                <span> Autor</span>
+                <p>Sofía Bohórquez</p>
+            </div>
+            <div> 
+    <span> Correo</span>
+    <p>ansofibo@gmail.com</p>
+</div>
+<div>
+    <span> Año</span>
+    <p> @2023</p>
+</div>
+        </footer>
+    </body>
+</html>
+
